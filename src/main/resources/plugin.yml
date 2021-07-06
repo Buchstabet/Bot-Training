@@ -1,0 +1,9 @@
+name: Bot-Training
+version: ${project.version}
+main: dev.buchstabet.bottraining.BotTraining
+api-version: 1.17
+prefix: Bot-Training
+authors: [ Buchstabet ]
+
+commands:
+  training:
