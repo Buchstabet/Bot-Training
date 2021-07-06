@@ -57,7 +57,7 @@ public final class BotTraining extends JavaPlugin {
   public void onEnable() {
     // Plugin startup logic
     saveDefaultConfig();
-    prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Prefix"));
+    prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Prefix1"));
     botName = ChatColor.translateAlternateColorCodes('&', getConfig().getString("BotName"));
 
     PluginManager pm = this.getServer().getPluginManager();
