@@ -57,7 +57,7 @@ public final class BotTraining extends JavaPlugin {
   public void onEnable() {
     // Plugin startup logic
     saveDefaultConfig();
-    prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Prefix1"));
+    prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Prefix"));
     botName = ChatColor.translateAlternateColorCodes('&', getConfig().getString("BotName"));
 
     PluginManager pm = this.getServer().getPluginManager();
@@ -81,7 +81,9 @@ public final class BotTraining extends JavaPlugin {
       world.setFullTime(14512L);
       world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
       world.setGameRule(GameRule.DO_MOB_SPAWNING, false);
-      world.setDifficulty(Difficulty.HARD);
+      if (world.getDifficulty().equals(Difficulty.PEACEFUL)) {
+        world.setDifficulty(Difficulty.HARD);
+      }
     }
 
     packetReader = new PacketReader();

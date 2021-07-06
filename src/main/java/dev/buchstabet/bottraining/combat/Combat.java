@@ -79,7 +79,6 @@ public class Combat extends Reflections {
     this.entity.setHealth(20);
     this.entity.setNoDamageTicks(10);
     this.entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2, false, false));
-    this.entity.setConversionTime(1);
     PacketPlayOutEntityDestroy packetPlayOutEntityDestroy = new PacketPlayOutEntityDestroy(entity.getEntityId());
     sendPacket(packetPlayOutEntityDestroy);
 
